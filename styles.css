@@ -138,3 +138,86 @@ a{
   padding-top: 100px;
   padding-left: 10%;
 }
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 50%;
+      margin: auto;
+  }
+a{
+	target:new;
+	target:front;
+}
+
+#container5{
+	margin: 15%;
+	display: block;
+	float: left;
+	list-style-type:none;
+	word-spacing:none;
+	line-height:2;	
+	target:new;
+	target:front;
+}
+#container5 a{
+	color: black !important;
+	list-style-type: none;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	padding:  0 0 0;
+	height: 120px;
+	target:new;
+	target:front;
+}
+#container5 a hover{
+	color: blue;
+	list-style-type: none;
+	target:new;
+	target:front;
+}
+#container2 ul {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+	width:100%;
+	position:absolute;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	target:new;
+	target:front;
+}
+
+#container2 li {
+    float: left;
+	target:new;
+	target:front;
+}
+
+#container2 li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	target:new;
+	target:front;
+}
+
+#container2 li a:hover:not(.active) {
+    background-color: #111;
+	target:new;
+	target:front;
+}
+
+#container2 .active {
+    background-color: #4CAF50;
+	target:new;
+	target:front;
+}
+#header h1{
+  padding-top: 100px;
+  padding-left: 10%;
+  target:new;
+	target:front;
+}
