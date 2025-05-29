@@ -1,0 +1,7 @@
+<div *ngIf="volumeId">
+  <h2>Overview of Volume {{ volumeId }}</h2>
+  <div [innerHTML]="volumeOverviewContent"></div>
+</div>
+<div *ngIf="!volumeId">
+  <p>Loading volume information...</p>
+</div>

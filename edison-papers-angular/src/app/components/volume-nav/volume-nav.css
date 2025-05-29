@@ -1,0 +1,45 @@
+/* Styles for VolumeNavComponent */
+:host {
+  display: block; /* Ensures the component takes up block space */
+  /* The original CSS had position:fixed properties.
+     This needs careful consideration in a component-based architecture.
+     It might be better to control positioning from a parent layout component
+     or by applying classes to the host that dictate its layout role.
+     Including them for now as per migration task, but marked for review.
+  */
+  /* background-color: #f1f1f1; /* Moved to ul, or :host if it should cover the whole fixed area */
+  /* width: 15%; /* Review: Consider if this width is always appropriate */
+  /* height: 50%; /* Review: Fixed height can be problematic */
+  /* position: fixed; /* Review: Highly dependent on overall page layout */
+  /* overflow: hidden; /* Review: If fixed height, content might be cut */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 20px; /* From #container3 ul */
+  padding-left: 0px; /* From #container3 ul */
+  background-color: #f1f1f1; /* From #container3 ul */
+
+  /* If :host is not position:fixed, these might be more relevant here or removed */
+  /* width: 100%; /* If ul is to fill the :host width */
+  /* height: 100%; /* If ul is to fill the :host height */
+  /* overflow-y: auto; /* If content might exceed height */
+}
+
+li a {
+  display: block; /* Changed from inline-block for full-width clickable area */
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active { /* Assuming 'active' class will be managed by Angular's RouterLinkActive */
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}

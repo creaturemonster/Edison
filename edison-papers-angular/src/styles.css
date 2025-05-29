@@ -1,0 +1,52 @@
+/* Global Styles for edison-papers-angular */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* Default font */
+  line-height: 1.6;
+}
+
+/* Styles for HeaderComponent title - using a more generic approach */
+/* It's better to style within HeaderComponent or use a class if this needs to be global */
+/* For now, placing a general h1 style for app-header, can be refined. */
+app-header h1 {
+  /* Example: padding-top: 20px; /* Adjusted from 100px */
+  /* padding-left: 5%; /* Adjusted from 10% */
+  /* Color and font size will likely be inherited or set in HeaderComponent */
+}
+
+/* Example of a potentially reusable utility class from .xl* if needed.
+   Most .xl* classes are too specific for global styles.
+   If specific text formatting is needed, it's better to create semantic utility classes
+   or apply styles directly to components.
+*/
+.text-arial-14pt { /* More semantic name for an example .xl* class */
+  color: black;
+  font-size: 14.0pt;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  font-family: Arial, sans-serif; /* Ensure sans-serif fallback */
+  vertical-align: bottom;
+  white-space: nowrap; /* Use with caution, can break layout */
+}
+
+/* ng-bootstrap carousel is generally self-styled.
+   If specific overrides are needed for .carousel-item img, they can be added here,
+   but the original .carousel-inner > .item > img rule for Bootstrap 3/4 is likely not needed.
+   Example:
+   ngb-carousel .carousel-item img {
+     max-height: 500px; // Example constraint
+     object-fit: cover; // Example object-fit
+   }
+*/
+
+/* Additional global resets or base styles can go here */
+a {
+  color: #007bff; /* Default link color from Bootstrap for consistency */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,7 @@
+<div *ngIf="volumeId && sectionName">
+  <h3>{{ sectionName }} - Volume {{ volumeId }}</h3>
+  <div [innerHTML]="sectionContent"></div>
+</div>
+<div *ngIf="!(volumeId && sectionName)">
+  <p>Loading section content...</p>
+</div>

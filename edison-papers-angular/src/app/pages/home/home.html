@@ -1,0 +1,67 @@
+<div class="container-fluid p-0">
+  <!-- Carousel -->
+  <ngb-carousel *ngIf="images.length > 0">
+    <ng-template ngbSlide *ngFor="let image of images; let i = index">
+      <div class="carousel-image-wrapper">
+        <a [routerLink]="image.route">
+          <img [src]="image.src" class="d-block w-100" [alt]="image.alt">
+        </a>
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>{{ image.title }}</h3>
+        <p>{{ image.description }}</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <!-- Introductory Article Text -->
+  <article class="container mt-4" style="font-family:arial;">
+    <h2>Welcome to the Edison Papers</h2>
+    <p>
+      This is an introductory paragraph about the Thomas A. Edison Papers project. It provides a brief overview of
+      Edison's work, the significance of his documents, and what users can expect to find on this digital platform.
+      The content here will be replaced by the actual text from the original index.html.
+    </p>
+    <p>
+      Further details about the project, its goals, and the team behind it can also be included here. We aim to
+      provide comprehensive access to Edison's vast collection of notebooks, correspondence, and other historical materials.
+    </p>
+  </article>
+
+  <!-- Grid of Volume Images/Links -->
+  <div class="container mt-4 mb-4">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="card">
+          <a routerLink="/volume/1">
+            <img src="assets/images/Volume_1_Edison.jpg" class="card-img-top" alt="Volume 1">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title"><a routerLink="/volume/1">Volume 1: The Making of an Inventor, February 1847-June 1873</a></h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <a routerLink="/volume/2">
+            <img src="assets/images/Volume_2_Edison.jpg" class="card-img-top" alt="Volume 2">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title"><a routerLink="/volume/2">Volume 2: From Workshop to Laboratory, June 1873-March 1876</a></h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <a routerLink="/volume/3">
+            <img src="assets/images/Volume_3_Edison.jpg" class="card-img-top" alt="Volume 3">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title"><a routerLink="/volume/3">Volume 3: Menlo Park: The Early Years, April 1876-December 1877</a></h5>
+          </div>
+        </div>
+      </div>
+      <!-- Add more volumes as needed -->
+    </div>
+  </div>
+</div>
