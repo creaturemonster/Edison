@@ -1,0 +1,35 @@
+/* Styles for NavigationComponent */
+:host {
+  display: block; /* Ensures the component takes up block space */
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; /* Adjusted from 25px - padding can be on :host or inner elements if needed */
+  overflow: hidden;
+  background-color: #333; /* From #container2 ul */
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-start; /* Align items to the start, or center/space-around as needed */
+}
+
+li {
+  /* float: left; removed, flexbox handles layout */
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px; /* From #container2 li a */
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111; /* From #container2 li a:hover:not(.active) */
+}
+
+li a.active { /* Assuming 'active' class will be managed by Angular's RouterLinkActive */
+  background-color: #4CAF50; /* From #container2 .active */
+}
